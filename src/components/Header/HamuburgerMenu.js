@@ -18,7 +18,7 @@ const StyledHamburgerMenu = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => (open ? '#ccc' : '#333')};
+    background-color: ${({ open }) => (open ? '#9580FF' : '#ccc')};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
@@ -39,6 +39,7 @@ const HamburgerMenu = () => {
   const [open, setOpen] = useState(false);
 
   return (
+    // icone do menu (3 linhas horizontais)
     <>
       <StyledHamburgerMenu open={open} onClick={() => setOpen(!open)}>
         <div />

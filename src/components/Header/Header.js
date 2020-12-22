@@ -10,9 +10,16 @@ const Nav = styled.nav`
   justify-content: space-between;
   background-color: #2a2c37;
   color: white;
+  font-weight: 600;
 
-  .logo {
-    padding: 15px;
+  li {
+    padding: 0 10px;
+  }
+
+  @media (max-width: 768px) {
+    li {
+      padding: 18px 10px;
+    }
   }
 `;
 
