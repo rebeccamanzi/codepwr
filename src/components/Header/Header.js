@@ -10,7 +10,6 @@ const Nav = styled.nav`
   justify-content: space-between;
   background-color: #2a2c37;
   color: white;
-  
 
   .logo {
     padding: 15px;
