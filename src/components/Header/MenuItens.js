@@ -1,43 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Itens = styled.ul`
-  display: flex;
-  margin: 0px;
-  padding: 0;
-  height: 60px;
-  display: table;
-`;
-
-const Item = styled.li`
+const Ul = styled.ul`
   list-style: none;
-  color: #e7e7e7;
-  padding: 0 42px;
-  text-align: center;
-  vertical-align: middle;
-  display: table-cell;
+  display: flex;
+  flex-flow: row nowrap;
+  li {
+    padding: 18px 10px;
+  }
+  @media (max-width: 768px) {
+    flex-flow: column nowrap;
+    background-color: #0d2538;
+    position: fixed;
+    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    padding-top: 3.5rem;
+    transition: transform 0.3s ease-in-out;
+    li {
+      color: #fff;
+    }
+  }
 `;
 
-const Link = styled.a`
-  text-decoration: none;
-  color: #e7e7e7;
-`;
-
-export const MenuItens = () => {
+const MenuItens = ({ open }) => {
   return (
-    <Itens>
-      <Item>
-        <Link href="#sobre">Sobre</Link>
-      </Item>
-      <Item>
-        <Link href="#posts">Posts</Link>
-      </Item>
-      <Item>
-        <Link href="#blog">Blog</Link>
-      </Item>
-      <Item>
-        <Link href="#contato">Contato</Link>
-      </Item>
-    </Itens>
+    <Ul open={open}>
+      <li>Sobre</li>
+      <li>Posts</li>
+      <li>Blog</li>
+      <li>Contato</li>
+    </Ul>
   );
 };
+
+export default MenuItens;

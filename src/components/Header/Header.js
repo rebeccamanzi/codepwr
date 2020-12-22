@@ -1,28 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
-import Contato from './Contato';
 import LogoColorida from './LogoColorida';
-import { MenuItens } from './MenuItens';
+import HamburgerMenu from './HamuburgerMenu';
 
-const Menu = styled.div`
-  background: #2a2c37;
-  color: E7E7E7;
-  font-weight: 600;
-  font-size: 18px;
-  margin: 0px;
-  height: 60px;
-  padding: 10px 20px;
+const Nav = styled.nav`
+  height: 55px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
+  background-color: #2a2c37;
+  color: white;
+  
+
+  .logo {
+    padding: 15px;
+  }
 `;
 
 const Header = () => {
   return (
-    <Menu>
+    <Nav>
       <LogoColorida />
-      <MenuItens />
-      <Contato />
-    </Menu>
+      <HamburgerMenu />
+    </Nav>
   );
 };
 
